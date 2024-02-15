@@ -102,3 +102,8 @@ The modular structure of the project ensures a clear separation of concerns, mak
 3. **Enrichment Service (`ProcessEnrichDataService`):**
    - Enriches CSV data with GLEIF values, including legal names, BIC codes, and transaction costs.
    - Validates CSV headers and data integrity.
+  
+
+## Room For Improvement: 
+- Handle More Scenarios in Unit Tests
+- Handle Edge Cases 
