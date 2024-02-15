@@ -2,21 +2,6 @@
 
 ProcessCsvFunction is an Azure Functions project designed to process CSV files, enrich the data within the CSV with additional information from the GLEIF (Global Legal Entity Identifier Foundation) API, and store the enriched data in Azure Table Storage.
 
-## Table of Contents
-- [Project Overview](#project-overview)
-- [Project Structure](#project-structure)
-- [Getting Started](#getting-started)
-  - [Prerequisites](#prerequisites)
-  - [Local Development](#local-development)
-- [Functionality](#functionality)
-- [Configuration](#configuration)
-- [Logging](#logging)
-- [Testing](#testing)
-- [Models](#models)
-- [Extensions](#extensions)
-- [Data Layer](#data-layer)
-- [Tests](#tests)
-
 ## Getting Started
 
 ### Prerequisites
