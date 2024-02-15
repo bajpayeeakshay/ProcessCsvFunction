@@ -1,0 +1,52 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <AzureFunctionsVersion>v4</AzureFunctionsVersion>
+    <UserSecretsId>e135ce2d-248d-4597-957f-91ad518e34b0</UserSecretsId>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Remove="GetEnrichedDataFunction\**" />
+    <Compile Remove="ProcessCsv.Data\**" />
+    <Compile Remove="ProcessCsvFunction.Data\**" />
+    <Compile Remove="ProcessCsvFunction.Services.Tests\**" />
+    <Compile Remove="ProcessCsvFunction.Services\**" />
+    <EmbeddedResource Remove="GetEnrichedDataFunction\**" />
+    <EmbeddedResource Remove="ProcessCsv.Data\**" />
+    <EmbeddedResource Remove="ProcessCsvFunction.Data\**" />
+    <EmbeddedResource Remove="ProcessCsvFunction.Services.Tests\**" />
+    <EmbeddedResource Remove="ProcessCsvFunction.Services\**" />
+    <None Remove="GetEnrichedDataFunction\**" />
+    <None Remove="ProcessCsv.Data\**" />
+    <None Remove="ProcessCsvFunction.Data\**" />
+    <None Remove="ProcessCsvFunction.Services.Tests\**" />
+    <None Remove="ProcessCsvFunction.Services\**" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="Azure.Storage.Blobs" Version="12.16.0" />
+    <PackageReference Include="Azure.Storage.Files.Shares" Version="12.1.0" />
+    <PackageReference Include="Azure.Storage.Queues" Version="12.14.0" />
+    <PackageReference Include="AzureExtensions.Swashbuckle" Version="3.3.2" />
+    <PackageReference Include="AzureFunctions.Extensions.Swashbuckle" Version="1.4.4" />
+    <PackageReference Include="Microsoft.Azure.Functions.Extensions" Version="1.1.0" />
+    <PackageReference Include="Microsoft.Azure.WebJobs.Extensions.Storage" Version="5.2.1" />
+    <PackageReference Include="Microsoft.Extensions.Azure" Version="1.6.3" />
+    <PackageReference Include="Microsoft.Extensions.Configuration.UserSecrets" Version="6.0.1" />
+    <PackageReference Include="Microsoft.NET.Sdk.Functions" Version="4.2.0" />
+    <PackageReference Include="Serilog" Version="3.1.1" />
+    <PackageReference Include="Serilog.Sinks.File" Version="5.0.0" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="ProcessCsv.Data\ProcessCsvFunction.Data.csproj" />
+    <ProjectReference Include="ProcessCsvFunction.Data\ProcessCsvFunction.Data.csproj" />
+    <ProjectReference Include="ProcessCsvFunction.Services\ProcessCsvFunction.Services.csproj" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Update="host.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="local.settings.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <CopyToPublishDirectory>Never</CopyToPublishDirectory>
+    </None>
+  </ItemGroup>
+</Project>
