@@ -18,7 +18,7 @@ public class ProcessCsvBlobTrigger
 
     [FunctionName(nameof(ProcessCsvBlobTrigger))]
     public void Run([BlobTrigger("process-csv-function-blob/{name}",
-        Connection = Constants.AzureStorageConnectionString)]Stream myBlob,
+        Connection = "AZURE_STORAGE_CONNECTION_STRING")]Stream myBlob,
         string name)
     {
         _logger.Information($"Blob Trigger function processing started for file - {name} ");
