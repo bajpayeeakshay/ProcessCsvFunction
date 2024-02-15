@@ -8,19 +8,18 @@ ProcessCsvFunction is an Azure Functions project designed to process CSV files, 
 Ensure the following prerequisites are met before setting up the project:
 
 - .NET Core SDK
-- Azure Storage account for Blob and Table Storage
-- GLEIF API key (if not using a public endpoint)
+- Azure Storage Explore 
 
 ### Setting up Local Environment
 
 #### Install NPM
-1. Install NPM from the official website.
+1. Install NPM from [https://nodejs.org/en/download].
 
 #### Install and Run Azurite
-1. Install Azurite for local Azure Storage emulation.
+1. Install Azurite for local Azure Storage emulation: [https://learn.microsoft.com/en-us/azure/storage/common/storage-use-azurite?tabs=docker-hub%2Cblob-storage#running-azurite-from-an-azure-functions-project]
 
 #### Install Storage Explorer
-1. Install Azure Storage Explorer.
+1. Install Azure Storage Explorer [https://azure.microsoft.com/en-us/products/storage/storage-explorer/]
 
 #### Get Azure Storage Connection String
 1. Run Storage Explorer.
