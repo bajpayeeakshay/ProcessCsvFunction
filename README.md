@@ -10,6 +10,20 @@ Ensure the following prerequisites are met before setting up the project:
 - .NET Core SDK
 - Azure Storage Explore 
 
+### Sample for local.settings.json
+
+{
+  "IsEncrypted": false,
+  "Values": {
+    "AzureWebJobsStorage": "UseDevelopmentStorage=true",
+    "AZURE_STORAGE_CONNECTION_STRING": "<AzureConnectionString>",
+    "BlobStorageName": "process-csv-function-blob/{name}",
+    "TableStorageName": "EnrichedDataSet",
+    "FUNCTIONS_WORKER_RUNTIME": "dotnet",
+    "Gleif_Url": "https://api.gleif.org/api/v1/"
+  }
+}
+
 ### Setting up Local Environment
 
 #### Install NPM
